@@ -19,4 +19,4 @@ def update():
 def render():
     for depth in range(len(world)):
         for o in world[depth]:
-            o.draw()
+            o.draw(depth)

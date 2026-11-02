@@ -5,8 +5,8 @@ class Grass:
     def __init__(self):
         self.image = load_image('grass.png')
 
-    def draw(self):
-        self.image.draw(400, 30)
+    def draw(self, layer):
+        self.image.draw(400, 30 - layer*10)
 
     def update(self):
         pass

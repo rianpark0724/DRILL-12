@@ -11,7 +11,7 @@ from ball import Ball
 
 class Boy:
     def __init__(self):
-        self.x, self.y = 400, 30
+        self.x, self.y = 400, 40
         self.frame = 0
         self.image = load_image('animation_sheet.png')
         self.idle_started_at = get_time()
@@ -87,7 +87,7 @@ class Boy:
             self.x += self.dir * 5
             self.x = max(25, min(get_canvas_width() - 25, self.x))
 
-    def draw(self):
+    def draw(self, layer):
         if self.state == 'SLEEP':
             angle = pi / 2 if self.face_dir == 1 else -pi / 2
             flip = '' if self.face_dir == 1 else 'h'

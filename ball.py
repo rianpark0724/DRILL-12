@@ -11,7 +11,7 @@ class Ball:
     def update(self):
         self.x += self.direction * 10
 
-    def draw(self):
+    def draw(self, layer):
         self.image.draw(self.x, self.y)
 
     def is_out_of_canvas(self):
